@@ -1,0 +1,156 @@
+/* Estilo global */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #4a90e2;
+}
+
+.container {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Form da tarefa */
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border-color: #4a90e2;
+  box-shadow: 0px 0px 8px rgba(74, 144, 226, 0.2);
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  background: #4a90e2;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+  background: #3b7dcf;
+}
+
+/* Lista de tarefa */
+.task-list {
+  margin-top: 20px;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 10px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-item span {
+  flex: 1;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.task-item span:hover {
+  color: #4a90e2;
+}
+
+.task-item.completed span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.task-item button {
+  margin-left: 10px;
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  background: #e74c3c;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.task-item button:first-child {
+  background: #2ecc71;
+}
+
+.task-item button:first-child:hover {
+  background: #27ae60;
+}
+
+.task-item button:hover {
+  background: #c0392b;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Design Responsivo */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  input[type="text"] {
+    margin-bottom: 10px;
+  }
+
+  button {
+    margin-left: 0;
+  }
+}
